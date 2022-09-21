@@ -1,0 +1,17 @@
+h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+body{background-color:purple;}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+#theme-options-wrapper{display:flex; justify-content:center;padding-top:50px;}
+.theme-dot{height:70px; width:70px; background-color:black; border-radius:50%; margin:5px; border:8px solid orange; cursor:pointer;}
+.theme-dot:hover{height:120px; width:120px;}
+#blue-mode{background-color:blue;}
+#green-mode{background-color:green;}
+#purple-mode{background-color:purple;}
+
+
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
