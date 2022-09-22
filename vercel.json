@@ -9,11 +9,7 @@
   "routes": [
     {
       "src": "/(.*)",
-<<<<<<< HEAD
       "dest": "/"
-=======
-      "deset": "/"
->>>>>>> origin/master
     }
   ]
 }
