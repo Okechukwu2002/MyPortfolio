@@ -43,61 +43,6 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/bluemode', methods=['POST','GET'])
-def bluemode():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        subject = request.form['subject']
-        message = request.form['message']
-        content = Message(name=name, email=email, subject=subject, message=message)
-        try:
-            db.session.add(content)
-            db.session.commit()
-            flash('Thank you for your message')
-            return redirect(url_for('bluemode'))
-        except:
-            flash('Your message was not sent, please resend')
-
-    return render_template('bluemode.html')
-
-
-@app.route('/greenmode', methods=['POST','GET'])
-def greenmode():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        subject = request.form['subject']
-        message = request.form['message']
-        content = Message(name=name, email=email, subject=subject, message=message)
-        try:
-            db.session.add(content)
-            db.session.commit()
-            flash('Thank you for your message')
-            return redirect(url_for('greenmode'))
-        except:
-            flash('Your message was not sent, please resend')
-
-    return render_template('greenmode.html')
-
-
-@app.route('/purplemode', methods=['POST','GET'])
-def purplemode():
-    if request.method == 'POST':
-        name = request.form['name']
-        email = request.form['email']
-        subject = request.form['subject']
-        message = request.form['message']
-        content = Message(name=name, email=email, subject=subject, message=message)
-        try:
-            db.session.add(content)
-            db.session.commit()
-            flash('Thank you for your message')
-            return redirect(url_for('purplemode'))
-        except:
-            flash('Your message was not sent, please resend')
-
-    return render_template('purplemode.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
