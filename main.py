@@ -98,3 +98,6 @@ def purplemode():
             flash('Your message was not sent, please resend')
 
     return render_template('purplemode.html')
+
+if __name__ == '__main__':
+    app.run(debug=True)
