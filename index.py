@@ -24,6 +24,7 @@ class Message(db.Model):
 
 
 
+
 @app.route('/', methods=['POST','GET'])
 def index():
     if request.method == 'POST':
